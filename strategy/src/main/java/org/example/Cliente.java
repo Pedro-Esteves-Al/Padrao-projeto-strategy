@@ -2,6 +2,11 @@ package org.example;
 
 public class Cliente {
     private String formaDePagamento;
+
+    public String getFormaDePagamento() {
+        return formaDePagamento;
+    }
+
     public void pagarPorPix() {
         Pagamento pagamento = new Pagamento();
         this.formaDePagamento = pagamento.processarPagamento(FormaDePagamentoPix.getInstance());
